@@ -5,7 +5,7 @@ import SkillProgressCard from "./components/dashboard/SkillProgressCard";
 import CareerReadinessCard from "./components/dashboard/CareerReadinessCard";
 import PortfolioCard from "./components/dashboard/PortfolioCard";
 import AIInsightsCard from "./components/dashboard/AIInsightsCard";
-import DailyStreak from "./components/dashboard/DailyStreak";
+import CourseProgressItem from "./components/dashboard/CourseProgressItem";
 import ResumeCard from "./components/dashboard/ResumeCard";
 import DeadlineList from "./components/dashboard/DeadlineList";
 import LiveClassList from "./components/dashboard/LiveClassList";
@@ -35,7 +35,7 @@ function App() {
 
         {/* RIGHT COLUMN: Right Panel */}
         <div className="w-full xl:w-[340px] space-y-8 shrink-0">
-          <DailyStreak />
+          <CourseProgressItem />
           <ResumeCard />
           <DeadlineList />
           <LiveClassList />
