@@ -10,6 +10,10 @@ import ResumeCard from "./components/dashboard/ResumeCard";
 import DeadlineList from "./components/dashboard/DeadlineList";
 import LiveClassList from "./components/dashboard/LiveClassList";
 
+import ContinueLearning from "./components/dashboard/ContinueLearning";
+import LearningProgressChart from "./components/dashboard/LearningProgressChart";
+import AvgScoreChart from "./components/dashboard/AvgScoreChart";
+
 function App() {
   return (
     <DashboardLayout>
@@ -31,6 +35,19 @@ function App() {
               <CareerReadinessCard />
               <AIInsightsCard />
               <PortfolioCard />
+            </div>
+          </section>
+          <section className="space-y-6">
+            <ContinueLearning />
+            
+            {/* Grid to hold the two charts side-by-side on larger screens */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="md:col-span-2">
+                <LearningProgressChart />
+              </div>
+              <div className="md:col-span-1">
+                <AvgScoreChart />
+              </div>
             </div>
           </section>
         </div>
