@@ -14,7 +14,7 @@ function App() {
   return (
     <DashboardLayout>
       <div className="mx-auto max-w-7xl flex flex-col xl:flex-row gap-8">
-        
+
         {/* LEFT COLUMN: Main Content */}
         <div className="flex-1 space-y-8 min-w-0">
           <WelcomeBanner />
@@ -22,6 +22,8 @@ function App() {
           <section className="space-y-6">
             <StatsGrid />
           </section>
+
+          <hr className="border-t border-gray-200 dark:border-white/10" />
 
           <section className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -40,7 +42,7 @@ function App() {
           <DeadlineList />
           <LiveClassList />
         </div>
-        
+
       </div>
     </DashboardLayout>
   );
