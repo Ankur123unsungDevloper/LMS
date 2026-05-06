@@ -1,18 +1,14 @@
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import DashboardLayout from "./components/layout/DashboardLayout";
-import WelcomeBanner from "./components/dashboard/WelcomeBanner";
-import StatsGrid from "./components/dashboard/StatsGrid";
-import SkillProgressCard from "./components/dashboard/SkillProgressCard";
-import CareerReadinessCard from "./components/dashboard/CareerReadinessCard";
-import PortfolioCard from "./components/dashboard/PortfolioCard";
-import AIInsightsCard from "./components/dashboard/AIInsightsCard";
-import CourseProgressItem from "./components/dashboard/CourseProgressItem";
-import ResumeCard from "./components/dashboard/ResumeCard";
-import DeadlineList from "./components/dashboard/DeadlineList";
-import LiveClassList from "./components/dashboard/LiveClassList";
-
-import ContinueLearning from "./components/dashboard/ContinueLearning";
-import LearningProgressChart from "./components/dashboard/LearningProgressChart";
-import AvgScoreChart from "./components/dashboard/AvgScoreChart";
+import Dashboard from "./pages/Dashboard";
+import Courses from "./pages/Courses";
+import LiveClasses from "./pages/LiveClasses";
+import Assignments from "./pages/Assignments";
+import Progress from "./pages/Progress";
+import Certificates from "./pages/Certificates";
+import Resume from "./pages/Resume";
+import Placement from "./pages/Placement";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -27,10 +23,10 @@ function App() {
             <StatsGrid />
           </section>
 
-          <hr className="border-t border-gray-200 dark:border-white/30" />
+          <hr className="border-t border-gray-200 dark:border-white/10" />
 
           <section className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[95%] h-[95%]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <SkillProgressCard />
               <CareerReadinessCard />
               <AIInsightsCard />
