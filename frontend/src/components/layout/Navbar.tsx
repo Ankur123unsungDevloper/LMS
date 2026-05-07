@@ -42,7 +42,6 @@ const Navbar: React.FC = () => {
       return;
     }
 
-    // @ts-ignore - TS may not have CSS.highlights typed depending on version
     CSS.highlights.clear();
     matchRangesRef.current = [];
     currentMatchIndexRef.current = -1;
@@ -86,14 +85,14 @@ const Navbar: React.FC = () => {
 
     if (ranges.length > 0) {
       matchRangesRef.current = ranges;
-      // @ts-ignore
+
       const highlight = new Highlight(...ranges);
-      // @ts-ignore
+
       CSS.highlights.set("search-results", highlight);
     }
 
     return () => {
-      // @ts-ignore
+
       if ('highlights' in CSS) CSS.highlights.clear();
     };
   }, [searchQuery, location.pathname]); // Re-run when query or page changes
@@ -107,9 +106,7 @@ const Navbar: React.FC = () => {
       const activeRange = ranges[currentMatchIndexRef.current];
 
       if ('highlights' in CSS) {
-        // @ts-ignore
         const activeHighlight = new Highlight(activeRange);
-        // @ts-ignore
         CSS.highlights.set('search-active', activeHighlight);
       }
 
